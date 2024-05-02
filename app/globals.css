@@ -4,30 +4,30 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --background-start-rgb: 0, 51, 102;
+  --background-end-rgb: 0, 0, 0;
 }
 
 body {
+  min-height: -webkit-fill-available;
+  min-height: 100vh;
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.error_text {
+  @apply text-red-500 font-normal text-sm
+}
+
+.input_field{
+  @apply border border-gray-300 rounded-md px-3 py-2 w-full font-normal text-black
 }
