@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 0, 51, 102;
-  --background-end-rgb: 0, 0, 0;
-}
-
 body {
   min-height: -webkit-fill-available;
   min-height: 100vh;
